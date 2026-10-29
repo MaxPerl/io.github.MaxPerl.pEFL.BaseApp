@@ -1,0 +1,24 @@
+{
+    "name": "luajit",
+    "no-autogen": true,
+    "make-args": [
+        "BUILDMODE=dynamic",
+        "PREFIX=${FLATPAK_DEST}"
+    ],
+    "make-install-args": [
+        "PREFIX=${FLATPAK_DEST}"
+    ],
+    "sources": [
+        {
+            "type": "git",
+            "url": "https://github.com/LuaJIT/LuaJIT.git",
+            "branch": "v2.1"
+        }
+    ],
+    "cleanup": [
+        "/bin",
+        "/include",
+        "/lib/pkgconfig",
+        "/share/man"
+    ]
+}
